@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Hopefunds" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.hopefundteam18.hopefund.HopefundApplication" />
+    <module name="hopefund" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
