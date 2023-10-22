@@ -17,4 +17,9 @@ public class FundApplicationController {
         return "login";
     }
 
+    @GetMapping("/Donate")
+    public String showDonatePage(){
+        return "Donate";
+    }
+
 }
