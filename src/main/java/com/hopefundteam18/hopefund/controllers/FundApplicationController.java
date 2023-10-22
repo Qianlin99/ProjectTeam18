@@ -22,4 +22,7 @@ public class FundApplicationController {
         return "Donate";
     }
 
+    @GetMapping("/ThankYou")
+    public String showThankYou() { return "ThankYou"; }
+
 }
