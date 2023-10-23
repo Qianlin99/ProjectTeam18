@@ -28,4 +28,7 @@ public class FundApplicationController {
     @GetMapping("/SignUp")
     public String showSignUp() { return "SignUp"; }
 
+    @GetMapping("/createAccount")
+    public String showCreateAccount() { return "createAccount"; }
+
 }
