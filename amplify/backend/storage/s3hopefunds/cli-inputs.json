@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3hopefunds",
+  "bucketName": "hopefunds",
+  "policyUUID": "215087d7",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
