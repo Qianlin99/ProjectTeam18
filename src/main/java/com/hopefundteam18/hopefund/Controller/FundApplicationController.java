@@ -1,8 +1,7 @@
-package com.hopefundteam18.hopefund.controllers;
+package com.hopefundteam18.hopefund.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class FundApplicationController {
@@ -12,10 +11,10 @@ public class FundApplicationController {
         return "index";
     }
 
-    @GetMapping("/login")
-    public String showLoginPage(){
-        return "login";
-    }
+//    @GetMapping("/login")
+//    public String showLoginPage(){
+//        return "login";
+//    }
 
     @GetMapping("/Donate")
     public String showDonatePage(){
