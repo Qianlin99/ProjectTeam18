@@ -1,0 +1,26 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hopefunds-staging-144936-authRole",
+      "UnauthRoleArn": "arn:aws:iam::589988039609:role/amplify-hopefunds-staging-144936-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::589988039609:role/amplify-hopefunds-staging-144936-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hopefunds-staging-144936-deployment",
+      "UnauthRoleName": "amplify-hopefunds-staging-144936-unauthRole",
+      "StackName": "amplify-hopefunds-staging-144936",
+      "StackId": "arn:aws:cloudformation:us-east-1:589988039609:stack/amplify-hopefunds-staging-144936/8d8949c0-727c-11ee-a90a-0ed3a89a2981",
+      "AmplifyAppId": "dwy0gzwkjpc62"
+    },
+    "categories": {
+      "auth": {
+        "HopeFunds": {}
+      },
+      "storage": {
+        "s3hopefunds": {}
+      },
+      "api": {
+        "hopefunds": {}
+      }
+    }
+  }
+}

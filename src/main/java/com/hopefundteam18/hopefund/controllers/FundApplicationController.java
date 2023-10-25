@@ -25,4 +25,10 @@ public class FundApplicationController {
     @GetMapping("/ThankYou")
     public String showThankYou() { return "ThankYou"; }
 
+    @GetMapping("/SignUp")
+    public String showSignUp() { return "SignUp"; }
+
+    @GetMapping("/createAccount")
+    public String showCreateAccount() { return "createAccount"; }
+
 }
