@@ -7,36 +7,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.*;
 
-
 @Entity
 @Data
-@Table(name = "USERS")
+@Table(name = "users")
 public class User {
-    public User(int id, String userType, String username, String password, String email, String contactNum) {
-        this.id = id;
-        this.userType = userType;
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.contactNum = contactNum;
-    }
-
-    public User() {
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", userType='" + userType + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", contactNum='" + contactNum + '\'' +
-                '}';
-    }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID") //see if need to put length later
     private int id;
 
@@ -54,6 +31,32 @@ public class User {
 
     @Column(name = "CONTACT_NUM")
     private String contactNum;
+
+    public User(String userType, String username, String password, String email, String contactNum) {
+        this.userType = userType;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.contactNum = contactNum;
+    }
+
+    public User() {
+        super();
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userType='" + userType + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", contactNum='" + contactNum + '\'' +
+                '}';
+    }
+
+
 
     public int getId() {
         return id;

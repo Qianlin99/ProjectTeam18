@@ -6,30 +6,42 @@ import com.hopefundteam18.hopefund.DTO.UserDTO;
 import com.hopefundteam18.hopefund.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.hopefundteam18.hopefund.Service.UserService;
-
-@RestController
-@CrossOrigin
-@RequestMapping("api/v1/user")
+//
+@Controller
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+//    @Autowired
+//    private UserService userService;
 
-    @PostMapping(path = "/save")
-    public String saveUser(@RequestBody UserDTO userDTO)
-    {
-        String id = userService.addUser(userDTO);
-        return id;
-    }
+    /*@GetMapping("/createAccount")
+    public String showCreateAccount(){
+        return "createAccount";
+    }*/
 
-    @PostMapping(path = "/login")
+    /*@PostMapping(path = "/createAccount")
+    public String saveUser(@ModelAttribute("user") UserDTO userDto, Model model){
+        userService.save(userDto);
+        model.addAttribute("message", "Registered Successfully!");
+        return "index";
+    }*/
+
+//    @PostMapping(path = "/save")
+//    public String saveUser(@RequestBody UserDTO userDTO)
+//    {
+//        String id = userService.addUser(userDTO);
+//        return id;
+//    }
+
+    /*@PostMapping(path = "/login")
     public ResponseEntity<?> loginUser(@RequestBody LoginDTO loginDTO)
     {
         LoginResponse loginResponse = userService.loginUser(loginDTO);
         return ResponseEntity.ok(loginResponse);
-    }
+    }*/
 
 
 //    @Autowired
