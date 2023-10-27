@@ -6,7 +6,6 @@ import com.hopefundteam18.hopefund.LoginResponse;
 import com.hopefundteam18.hopefund.Repo.UserRepo;
 import com.hopefundteam18.hopefund.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -18,11 +17,16 @@ public class UserIMPL implements UserService {
     private UserRepo userRepo;
 //    @Autowired
 //    private PasswordEncoder passwordEncoder;
+
+    @Override
+    public User save(UserDTO userDto){
+        User user = new User("user", userDto.getUsername(), userDto.getPassword(), userDto.getEmail(), userDto.getContactNum());
+        return userRepo.save(user);
+    }
     @Override
     public String addUser(UserDTO userDTO) {
 
         User user = new User(
-                userDTO.getId(),
                 userDTO.getUserType(),
                 userDTO.getContactNum(),
                 userDTO.getEmail(),
@@ -38,7 +42,7 @@ public class UserIMPL implements UserService {
     @Override
     public LoginResponse loginUser(LoginDTO loginDTO) {
         String msg = "";
-        User user1 = userRepo.findByEmail(loginDTO.getEmail());
+        //User user1 = userRepo.findByEmail(loginDTO.getEmail());
         /*if (user1 != null) {
             String password = loginDTO.getPassword();
             String encodedPassword = user1.getPassword();

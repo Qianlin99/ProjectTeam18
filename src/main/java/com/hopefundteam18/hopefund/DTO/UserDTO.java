@@ -9,7 +9,6 @@ import javax.persistence.Column;
 
 public class UserDTO {
 
-    private int id;
     private String userType;
     private String username;
     private String password;
@@ -17,7 +16,6 @@ public class UserDTO {
     private String contactNum;
 
     public UserDTO(int id, String userType, String username, String password, String email, String contactNum) {
-        this.id = id;
         this.userType = userType;
         this.username = username;
         this.password = password;
@@ -26,14 +24,6 @@ public class UserDTO {
     }
 
     public UserDTO() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUserType() {
@@ -79,7 +69,6 @@ public class UserDTO {
     @Override
     public String toString() {
         return "UserDTO{" +
-                "id=" + id +
                 ", userType='" + userType + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
